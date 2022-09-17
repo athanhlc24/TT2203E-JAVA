@@ -1,7 +1,11 @@
 package session1;
 
+import java.util.Scanner;
+
 public class demo_1 {
     public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
         System.out.println("hello worl");
         int x = 10;
         System.out.println("x = "+x);
@@ -41,8 +45,12 @@ public class demo_1 {
 
         // in phân số
         Phan_so ps = new Phan_so();
-        ps.setA(6);
-        ps.setB(4);
+        System.out.println("Hãy nhập vào tử số và mẫu số: ");
+        ps.setA(sc.nextInt());
+        ps.setB(sc.nextInt());
+        Phan_so ps2 = new Phan_so();
+        ps2.setA(9);
+        ps2.setB(15);
         System.out.println("Phan so la: ");
         ps.In_phan_so();
         // rút gọn phân số
@@ -52,14 +60,12 @@ public class demo_1 {
         //  nghịch đảo phân số
         System.out.println("Ngich dao phan so la: ");
         ps.Ngichdaophanso();
-        // cộng phân số
-        System.out.println("Tong phan so la: ");
-        ps.Congphanso();
-        // trừ phân số
-        System.out.println("Tru phan so la: ");
-        ps.Truphanso();
-        // nhân phân số
-        System.out.println("Nhan phan so la: ");
-        ps.Nhanphanso();
+        System.out.println(ps.getA()+"/"+ps.getB());
+        // ADD
+        System.out.println("ADD phan so la: ");
+        Phan_so tong = ps.add(ps2);
+        tong.Rutgonphanso();
+        tong.In_phan_so();
+
     }
 }

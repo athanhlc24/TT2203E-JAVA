@@ -24,40 +24,32 @@ public class Phan_so {
         this.b = b;
     }
     public void In_phan_so(){
-        System.out.println(a+"/"+b);
+        System.out.println(getA()+"/"+getB());
     }
-    public int UCLN(int a, int b){
-        while (a!=b){
-            if (a>b){
-                a -= b;
-            }else {
-                b -= a;
-            }
-        }
-        return a;
-    }
+
     public void Rutgonphanso(){
-        int i = UCLN(this.getA(), this.getB());
-        this.setA(this.getA()/i);
-        this.setB(this.getB()/i);
+      int ucln = 1;
+      for (int i = Math.min(Math.abs(a),Math.abs(b)); i >1;i--){
+          if (a%i==0&&b%i==0){
+              ucln = i;
+              break;
+          }
+      }
+      setA(a/ucln);
+      setB(b/ucln);
 
     }
     public void Ngichdaophanso(){
-        System.out.println(b+"/"+a);
+        int tmp = a;
+        a = b;
+        b = tmp;
     }
-    public void Congphanso(){
-        int ts = this.getA() * this.getB() + this.getA() * this.getB();
-        int ms = this.getB()* this.getB();
-        System.out.println(ts+"/"+ms);
+    public Phan_so add(Phan_so f){
+        Phan_so tong = new Phan_so();
+        tong.a = this.a * f.b + this.b * f.a;
+        tong.b = this.b * f.b;
+        //tong.Rutgonphanso();
+        return tong;
     }
-    public void  Truphanso(){
-        int ts = this.getA() * this.getB() - this.getA() * this.getB();
-        int ms = this.getB()* this.getB();
-        System.out.println(ts+"/"+ms);
-    }
-    public void  Nhanphanso(){
-        int ts = this.getA() *  this.getA();
-        int ms = this.getB() * this.getB();
-        System.out.println(ts+"/"+ms);
-    }
+
 }
