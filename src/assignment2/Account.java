@@ -38,19 +38,23 @@ public class Account {
         this.balance = balance;
     }
 
-    public void credit(int n){
-        if (n < 0) {
-           System.out.println("Số tiền nạp vào phải là dương ");
-        }else
-        balance = balance + n;
+    public boolean credit(int n){
+        if (n <= 0) return false ;
+            balance += n;
+         return true;
     }
-    public void debit(int k){
-        if (k < balance){
-            balance = balance - k;
-            System.out.println(getBalance());
+    public boolean debit(int n){
+        if (n <= 0 || n > balance) return false;
+        balance -= n;
+        return true;
+    }
+    public boolean tranfer(Account account, int n){
+        if (n <= 0 || n > balance) return false;
+        account.balance += n;
+        balance -= n;
+        return true;
 
-        }else
-            System.out.println("Số tiền thanh toán phải nhỏ hơn số tiền trong tài khoản");
     }
+
 }
 
