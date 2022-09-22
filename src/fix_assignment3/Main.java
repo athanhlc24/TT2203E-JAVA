@@ -7,5 +7,12 @@ public class Main {
         System.out.println("Thành tiền của VN: "+vn.thanhTien());
         System.out.println("Thành tiền của Nn: "+nn.thanhTien());
 
+        // upcasting và dowcasting
+        Khach_hang kh = (Khach_hang) new Vn(3,"a","2022",100,"ca nhan");
+        System.out.println("Thành tiền của VN: "+kh.thanhTien());
+
+        Vn khvn = (Vn) kh;
+        System.out.println("Thành tiền của VN: "+khvn.thanhTien());
+
     }
 }
