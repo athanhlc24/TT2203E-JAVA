@@ -1,6 +1,9 @@
 package assignment4_phone;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class PhoneBook extends Phone{
     public ArrayList<PhoneNumber> PhoneList;
@@ -58,6 +61,11 @@ public class PhoneBook extends Phone{
 
     @Override
     public void sort() {
-
+        Collections.sort(PhoneList, new Comparator<PhoneNumber>() {
+            @Override
+            public int compare(PhoneNumber o1, PhoneNumber o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+        });
     }
 }
