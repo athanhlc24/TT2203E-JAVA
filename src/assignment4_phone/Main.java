@@ -8,8 +8,9 @@ public class Main {
         pb.insertPhone("Tuấn","999999999");
         pb.insertPhone("hoàng","12321312");
         System.out.println(pb.PhoneList.size());
-        pb.updatePhone("Tuấn","999999999","55555555555555555555555");
 
+        pb.updatePhone("Tuấn","999999999","55555555555555555555555");
+        System.out.println("Update đã xong ");
         System.out.println("tìm kiếm là: ");
         PhoneNumber p = pb.searchPhone("Nam");
             if (p!=null){
