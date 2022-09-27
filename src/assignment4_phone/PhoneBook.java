@@ -20,14 +20,14 @@ public class PhoneBook extends Phone{
                 }
                 // có tên nhưngg chưa có số
                 p.getPhone().add(phone);
-                System.out.println("Đã thêm"+phone+"vào liên lạc có sẵn");
+                System.out.println("Đã thêm "+phone+" vào liên lạc có sẵn");
                 return;
             }
         }
         // nếu mà k có
         PhoneNumber pn = new PhoneNumber(name,phone);
         PhoneList.add(pn);
-        System.out.println("Đã thêm"+name+"vào liên lạc");
+        System.out.println("Đã thêm "+name+" vào liên lạc");
     }
 
     @Override
