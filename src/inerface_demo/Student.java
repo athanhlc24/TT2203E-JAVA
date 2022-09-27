@@ -1,6 +1,8 @@
 package inerface_demo;
 
-public class Student implements StudentInterface,FPTStudentInterface{
+import abstract_truu_tuong_seasion4.Human;
+
+public class Student extends Human implements StudentInterface{
     @Override
     public void run() {
 
@@ -16,8 +18,4 @@ public class Student implements StudentInterface,FPTStudentInterface{
 
     }
 
-    @Override
-    public void coding() {
-
-    }
 }
