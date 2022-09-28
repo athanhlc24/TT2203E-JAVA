@@ -8,21 +8,19 @@ public class News implements INews {
     public String PublishDate;
     public String Author;
     public String Content;
-    public float AverageRate;
+    public double AverageRate;
 
-    ArrayList<Integer> RateList = new ArrayList<>(3);
+    int[] RateList = new int[3];
 
     public News() {
     }
 
-    public News(int ID, String title, String publishDate, String author, String content, float averageRate, ArrayList<Integer> rateList) {
+    public News(int ID, String title, String publishDate, String author, String content) {
         this.ID = ID;
         Title = title;
         PublishDate = publishDate;
         Author = author;
         Content = content;
-        AverageRate = averageRate;
-        RateList = rateList;
     }
 
     public int getID() {
@@ -65,15 +63,15 @@ public class News implements INews {
         Content = content;
     }
 
-    public float getAverageRate() {
+    public double getAverageRate() {
         return AverageRate;
     }
 
-    public ArrayList<Integer> getRateList() {
+    public int[] getRateList() {
         return RateList;
     }
 
-    public void setRateList(ArrayList<Integer> rateList) {
+    public void setRateList(int[] rateList) {
         RateList = rateList;
     }
 
@@ -83,15 +81,14 @@ public class News implements INews {
         System.out.println(getPublishDate());
         System.out.println(getAuthor());
         System.out.println(getContent());
-        System.out.println(getContent());
         System.out.println(getAverageRate());
     }
 
-    public float Calculate(){
-        float a = 0;
+    public void Calculate(){
+        int a = 0;
         for (int rl: RateList) {
             a +=rl;
         }
-        return a/3;
+        this.AverageRate = (a/3);
     }
 }
