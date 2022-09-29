@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="249.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhập các thông tin" />
+      <TextField layoutX="26.0" layoutY="38.0" prefHeight="25.0" prefWidth="199.0" promptText="Nhập họ tên của bạn" />
+      <TextField layoutX="363.0" layoutY="38.0" prefHeight="25.0" prefWidth="199.0" promptText="Email của bạn" />
+      <TextField layoutX="26.0" layoutY="96.0" prefHeight="25.0" prefWidth="199.0" promptText="Tuổi của bạn" />
+      <TextField layoutX="363.0" layoutY="96.0" prefHeight="25.0" prefWidth="199.0" promptText="Địa chỉ của bạn" />
+      <Button layoutX="223.0" layoutY="142.0" mnemonicParsing="false" text="In thông tin bạn vừa nhập" />
+      <Text layoutX="26.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Họ và tên: " />
+      <Text layoutX="26.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email của bạn: " />
+      <Text layoutX="26.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuổi của bạn: " />
+      <Text layoutX="26.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ của bạn: " />
+   </children>
+</Pane>
