@@ -85,10 +85,10 @@ public class News implements INews {
     }
 
     public void Calculate(){
-        int a = 0;
+        double a = 0;
         for (int rl: RateList) {
             a +=rl;
         }
-        this.AverageRate = (a/3);
+        this.AverageRate = a/3;
     }
 }
