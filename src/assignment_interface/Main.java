@@ -10,6 +10,7 @@ public class Main {
         n.RateList[2]=6;
         n.Calculate();
         n.Display();
+        //n.Calculate().Display();
 
 
     }

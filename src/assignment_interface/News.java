@@ -91,4 +91,13 @@ public class News implements INews {
         }
         this.AverageRate = a/3;
     }
+
+//    public News Calculate(){
+//        double a = 0;
+//        for (int rl: RateList) {
+//            a +=rl;
+//        }
+//        AverageRate = a/3;
+//        return this;
+//    }
 }
