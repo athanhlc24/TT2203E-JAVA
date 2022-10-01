@@ -8,22 +8,59 @@ public class Controller {
     public TextField txtEmail;
     public TextField txtAge;
     public TextField txtAddress;
+
     public Text tFullName;
     public Text tEmail;
     public Text tAge;
     public Text tAddress;
+
+    public Text noticeName;
+    public Text noticeEmail;
+    public Text noticeAge;
+    public Text noticeAddress;
     public void handleSubmit(){
         String fn = txtFullName.getText();
-        tFullName.setText(fn);
+        if (fn.isEmpty()){
+            noticeName.setText("Vui lòng nhập họ tên: ");
+            noticeName.setVisible(true);
+        }else {
+
+            tFullName.setText(fn);
+            noticeName.setVisible(false);
+        }
+
+
 
         String em = txtEmail.getText();
-        tEmail.setText(em);
+        if (em.isEmpty() || !em.contains("@") || em.startsWith("@")||em.endsWith("@")){
+            noticeEmail.setText("Vui lòng nhập vào một email");
+            noticeEmail.setVisible(true);
+        }else {
+            noticeEmail.setVisible(false);
+            tEmail.setText(em);
+        }
+
 
         String ag = txtAge.getText();
-        tAge.setText(ag);
+        try {
+            Integer nAge = Integer.parseInt(ag);
+            if (nAge<0||nAge>100)
+                throw new Exception("Vui lòng nhập tuổi hợp lệ");
+            tAge.setText(ag);
+            noticeAge.setVisible(false);
+        }catch (Exception e){
+            noticeAge.setText(e.getMessage());
+            noticeAge.setVisible(true);
+        }
 
         String ad = txtAddress.getText();
-        tAddress.setText(ad);
+        if(ad.isEmpty() || ad.length() < 10){
+            noticeAddress.setText("Vui lòng nhập vào một địa chỉ");
+            noticeAddress.setVisible(true);
+        }else{
+            noticeAddress.setVisible(false);
+            tAddress.setText(ad);
+        }
     }
 
 }

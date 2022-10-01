@@ -18,5 +18,10 @@
       <Text fx:id="tEmail" layoutX="26.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email của bạn: " />
       <Text fx:id="tAge" layoutX="26.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuổi của bạn: " />
       <Text fx:id="tAddress" layoutX="26.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ của bạn: " />
+
+      <Text fx:id="noticeName" layoutX="102.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="noticeEmail" layoutX="451.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="noticeAge" layoutX="101.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="noticeAddress" layoutX="451.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
    </children>
 </Pane>
