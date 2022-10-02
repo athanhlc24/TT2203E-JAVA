@@ -23,14 +23,19 @@ public class Controller {
             notName.setVisible(false);
 
         }
+
         String sdt = txtSDT.getText();
-        if (sdt.isEmpty()){
-            notSDT.setText("Vui lòng nhập tên");
-            notSDT.setVisible(true);
-        }else {
+
+        try {
+            Integer nsdt = Integer.parseInt(sdt);
+            if (nsdt<10||nsdt>1000000000)
+                throw new Exception("Vui lòng nhập số điện thoại phải là 10 số");
             tSDT.setText(sdt);
             notSDT.setVisible(false);
-
+        }catch (Exception e){
+            notSDT.setText(e.getMessage());
+            notSDT.setVisible(true);
         }
+
     }
 }
