@@ -55,7 +55,7 @@ public class Controller {
 
         String ad = txtAddress.getText();
         if(ad.isEmpty() || ad.length() < 10){
-            noticeAddress.setText("Vui lòng nhập vào một địa chỉ");
+            noticeAddress.setText("Vui lòng nhập vào một địa chỉ phải có hơn 10 kí tự");
             noticeAddress.setVisible(true);
         }else{
             noticeAddress.setVisible(false);
