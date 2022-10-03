@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane  fx:controller="javafx_assignment.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text  layoutX="249.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhập các thông tin" />
+      <TextField fx:id="txtFullName" layoutX="26.0" layoutY="38.0" prefHeight="25.0" prefWidth="199.0" promptText="Nhập họ tên của bạn" />
+      <TextField fx:id="txtEmail" layoutX="363.0" layoutY="38.0" prefHeight="25.0" prefWidth="199.0" promptText="Email của bạn" />
+      <TextField fx:id="txtAge" layoutX="26.0" layoutY="96.0" prefHeight="25.0" prefWidth="199.0" promptText="Tuổi của bạn" />
+      <TextField fx:id="txtAddress" layoutX="363.0" layoutY="96.0" prefHeight="25.0" prefWidth="199.0" promptText="Địa chỉ của bạn" />
+      <Button onAction="#handleSubmit" layoutX="223.0" layoutY="142.0" mnemonicParsing="false" text="In thông tin bạn vừa nhập" />
+      <Text fx:id="tFullName" layoutX="26.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Họ và tên: " />
+      <Text fx:id="tEmail" layoutX="26.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email của bạn: " />
+      <Text fx:id="tAge" layoutX="26.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuổi của bạn: " />
+      <Text fx:id="tAddress" layoutX="26.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ của bạn: " />
+
+      <Text fx:id="noticeName" layoutX="102.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="noticeEmail" layoutX="451.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="noticeAge" layoutX="101.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Text fx:id="noticeAddress" layoutX="451.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+   </children>
+</Pane>
