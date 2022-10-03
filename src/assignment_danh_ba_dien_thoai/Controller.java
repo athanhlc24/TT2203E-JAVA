@@ -1,5 +1,6 @@
 package assignment_danh_ba_dien_thoai;
 
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
@@ -12,6 +13,7 @@ public class Controller {
 
     public Text notName;
     public Text notSDT;
+
 
     public void danhbaSubmit(){
         String name = txtName.getText();

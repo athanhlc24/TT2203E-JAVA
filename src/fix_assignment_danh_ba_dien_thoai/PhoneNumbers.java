@@ -1,10 +1,9 @@
 package fix_assignment_danh_ba_dien_thoai;
-
-public class PhoneNumber {
+public class PhoneNumbers {
     String name;
     String phone;
 
-    public PhoneNumber(String name, String phone) {
+    public PhoneNumbers(String name, String phone) {
         this.name = name;
         this.phone = phone;
     }
@@ -26,6 +25,6 @@ public class PhoneNumber {
     }
 
     public String toString(){
-        return getPhone()+"_"+getPhone()+"\n";
+        return getName()+"_"+getPhone()+"\n";
     }
 }
