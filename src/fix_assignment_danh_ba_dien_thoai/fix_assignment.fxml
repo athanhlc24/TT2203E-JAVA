@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fix_assignment_danh_ba_dien_thoai.Controller">
+    <children>
+        <Text layoutX="24.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhập thông tin danh bạ" />
+        <TextField fx:id="txtName" layoutX="24.0" layoutY="98.0" prefHeight="25.0" prefWidth="203.0" promptText="Nhập tên" />
+        <TextField fx:id="txtSDT" layoutX="24.0" layoutY="179.0" prefHeight="25.0" prefWidth="203.0" promptText="Nhập số" />
+        <Text layoutX="402.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Danh bạ đã lưu là" />
+        <Text fx:id="tName" fill="#e41313" layoutX="402.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên" />
+        <Text fx:id="tSDT" fill="#e81010" layoutX="402.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SDT" />
+        <Button layoutX="259.0" layoutY="249.0" mnemonicParsing="false" onAction="#danhbaSubmit" text="Lưu danh bạ" />
+        <Text fx:id="notName" layoutX="24.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+        <Text fx:id="notSDT" layoutX="24.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+    </children>
+</Pane>
