@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="multipage.form.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="619.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button onAction="#onToList" layoutX="24.0" layoutY="27.0" mnemonicParsing="false" text="&lt;&lt;Back to list" />
+      <TextField layoutX="116.0" layoutY="95.0" prefHeight="25.0" prefWidth="387.0" promptText="Name" />
+      <TextField layoutX="116.0" layoutY="147.0" prefHeight="25.0" prefWidth="387.0" promptText="Code" />
+      <TextField layoutX="116.0" layoutY="208.0" prefHeight="25.0" prefWidth="387.0" promptText="our" />
+      <Button  layoutX="451.0" layoutY="318.0" mnemonicParsing="false" text="Submit" />
+   </children>
+</Pane>
