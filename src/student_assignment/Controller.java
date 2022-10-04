@@ -6,12 +6,18 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
+import java.util.Collections;
+import java.util.Comparator;
+
 public class Controller {
     public TextField txtName;
     public TextField txtEmail;
     public TextField txtMark;
     public Text error;
     public ListView<Students> lvStudent;
+
+    private boolean sortName = true;
+
     private ObservableList<Students> studentList = FXCollections.observableArrayList();
 
     public void studentSubmit(){
@@ -34,6 +40,16 @@ public class Controller {
         txtName.setText("");
         txtEmail.setText("");
         txtMark.setText("");
+    }
+    public void sortByName(){
+        boolean sort = sortName;
+        Collections.sort(studentList, new Comparator<Students>() {
+            @Override
+            public int compare(Students o1, Students o2) {
+                return o1.getName().compareTo(o2.getName());
+            }
+        });
+        lvStudent.refresh();
     }
 
 }

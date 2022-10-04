@@ -11,7 +11,7 @@
       <TextField fx:id="txtEmail" layoutX="52.0" layoutY="111.0" promptText="email" />
       <TextField fx:id="txtMark" layoutX="52.0" layoutY="168.0" promptText="diem" />
       <ListView fx:id="lvStudent" layoutX="303.0" layoutY="81.0" prefHeight="200.0" prefWidth="282.0" />
-      <Button layoutX="359.0" layoutY="46.0" mnemonicParsing="false" text="Sort by name" />
+      <Button onAction="#sortByName" layoutX="359.0" layoutY="46.0" mnemonicParsing="false" text="Sort by name" />
       <Button layoutX="468.0" layoutY="46.0" mnemonicParsing="false" text="Sort by diem" />
       <Button layoutX="201.0" layoutY="244.0" mnemonicParsing="false" onAction="#studentSubmit" text="Button_submit" />
       <Text fx:id="error" layoutX="52.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
