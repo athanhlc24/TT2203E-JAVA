@@ -16,21 +16,24 @@ public class Controller {
 
     public void studentSubmit(){
         try {
-            error.setVisible(false);
-            if(txtName.getText().isEmpty() || txtEmail.getText().isEmpty()||txtMark.getText().isEmpty()){
+            Integer mark = Integer.parseInt(txtMark.getText());
+            if(txtName.getText().isEmpty() || txtEmail.getText().isEmpty()||txtMark.getText().isEmpty()||!txtEmail.getText().contains("@")||mark<0||mark>100){
                 throw new Exception("Vui lòng nhập đầy đủ tên, email và điểm");
             }
-//
-            printResult();
+            studentList.add(new Students(txtName.getText(),txtEmail.getText(),mark));
+            lvStudent.setItems(studentList);
+            lvStudent.refresh();
+            clearInput();
         }catch (Exception e){
             error.setText(e.getMessage());
             error.setVisible(true);
         }
+
+    }
+    public void clearInput(){
+        txtName.setText("");
+        txtEmail.setText("");
+        txtMark.setText("");
     }
 
-
-    public void printResult(){
-        lvStudent.setItems(studentList);
-        lvStudent.refresh();
-    }
 }
