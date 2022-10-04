@@ -17,6 +17,7 @@ public class Controller {
     public ListView<Students> lvStudent;
 
     private boolean sortName = true;
+    private boolean sortMark = true;
 
     private ObservableList<Students> studentList = FXCollections.observableArrayList();
 
@@ -50,6 +51,17 @@ public class Controller {
             }
         });
         sortName = !sortName;
+        lvStudent.refresh();
+    }
+    public void sortByMark(){
+
+        Collections.sort(studentList, new Comparator<Students>() {
+            @Override
+            public int compare(Students o1, Students o2) {
+                return sortMark?o1.getMark() - o2.getMark():o2.getMark()-o1.getMark();
+            }
+        });
+        sortMark = !sortMark;
         lvStudent.refresh();
     }
 
