@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="assignment_mon_hoc.addNewMonHoc.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txtName" layoutX="60.0" layoutY="87.0" prefHeight="25.0" prefWidth="174.0" promptText="Name" />
+      <TextField fx:id="txtCode" layoutX="60.0" layoutY="150.0" prefHeight="25.0" prefWidth="174.0" promptText="Code" />
+      <TextField fx:id="txtHour" layoutX="60.0" layoutY="200.0" prefHeight="25.0" prefWidth="174.0" promptText="Hours" />
+      <Button onAction="#monhocSubmit" layoutX="392.0" layoutY="87.0" mnemonicParsing="false" text="Xác nhận" />
+      <Button onAction="#onToList" layoutX="392.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Trở lại" />
+      <Text fx:id="error" fill="#f50606" layoutX="60.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" wrappingWidth="271.13671875" />
+   </children>
+</Pane>
