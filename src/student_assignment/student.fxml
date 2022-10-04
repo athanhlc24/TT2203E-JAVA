@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane fx:controller="student_assignment.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="student_assignment.Controller">
    <children>
       <TextField fx:id="txtName" layoutX="52.0" layoutY="58.0" promptText="ten" />
       <TextField fx:id="txtEmail" layoutX="52.0" layoutY="111.0" promptText="email" />
       <TextField fx:id="txtMark" layoutX="52.0" layoutY="168.0" promptText="diem" />
       <ListView fx:id="lvStudent" layoutX="359.0" layoutY="81.0" prefHeight="200.0" prefWidth="200.0" />
-      <Button onAction="#bttName" layoutX="359.0" layoutY="46.0" mnemonicParsing="false" text="Button_ten" />
-      <Button onAction="#bttMark" layoutX="478.0" layoutY="46.0" mnemonicParsing="false" text="Button_diem" />
-      <Button onAction="#studentSubmit" layoutX="235.0" layoutY="240.0" mnemonicParsing="false" text="Button_submit" />
+      <Button layoutX="359.0" layoutY="46.0" mnemonicParsing="false" onAction="#bttName" text="Button_ten" />
+      <Button layoutX="478.0" layoutY="46.0" mnemonicParsing="false" onAction="#bttMark" text="Button_diem" />
+      <Button layoutX="235.0" layoutY="240.0" mnemonicParsing="false" onAction="#studentSubmit" text="Button_submit" />
+      <Text fx:id="error" layoutX="52.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
    </children>
 </Pane>
