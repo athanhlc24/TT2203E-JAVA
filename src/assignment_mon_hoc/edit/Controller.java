@@ -4,6 +4,7 @@ package assignment_mon_hoc.edit;
 
 import assignment_mon_hoc.Main;
 
+import assignment_mon_hoc.addNewMonHoc.MonHoc;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -31,8 +32,10 @@ public class Controller implements Initializable {
             txtCode.setText(assignment_mon_hoc.listMonHoc.Controller.editItems.getName());
             txtCode.setText(assignment_mon_hoc.listMonHoc.Controller.editItems.getCode());
             txtCode.setText(assignment_mon_hoc.listMonHoc.Controller.editItems.getHour());
-        }catch (Exception e){
             txtCode.setEditable(false);
+
+        }catch (Exception e){
+
         }
 
     }
@@ -46,6 +49,17 @@ public class Controller implements Initializable {
     }
 
     public void submit(ActionEvent actionEvent){
+        try {
 
+            if(txtName.getText().isEmpty() ||txtHour.getText().isEmpty()){
+                throw new Exception("Vui lòng nhập đầy đủ tên,code và giờ");
+            }
+            assignment_mon_hoc.listMonHoc.Controller.editItems.setName(txtName.getText());
+            assignment_mon_hoc.listMonHoc.Controller.editItems.setHour(txtHour.getText());
+            onToList(null);
+        }catch (Exception e){
+            error.setText(e.getMessage());
+            error.setVisible(true);
+        }
     }
 }

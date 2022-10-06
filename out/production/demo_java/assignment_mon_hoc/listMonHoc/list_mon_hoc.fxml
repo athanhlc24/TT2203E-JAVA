@@ -4,10 +4,10 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane fx:controller="assignment_mon_hoc.listMonHoc.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment_mon_hoc.listMonHoc.Controller">
    <children>
       <ListView fx:id="lvListMonHoc" layoutX="45.0" layoutY="135.0" prefHeight="200.0" prefWidth="519.0" />
-      <Button onAction="#onToForm" layoutX="444.0" layoutY="75.0" mnemonicParsing="false" text="Thêm môn học mới" />
+      <Button layoutX="444.0" layoutY="75.0" mnemonicParsing="false" onAction="#onToForm" text="Thêm môn học mới" />
+      <Button onAction="#edit" layoutX="444.0" layoutY="110.0" mnemonicParsing="false" text="Chỉnh sửa" />
    </children>
 </Pane>
