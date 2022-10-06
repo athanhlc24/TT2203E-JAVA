@@ -28,11 +28,16 @@ public class Controller {
     }
     public void monhocSubmit(){
         try {
-
+            int hours = Integer.parseInt(txtHour.getText());
             if(txtName.getText().isEmpty() || txtCode.getText().isEmpty()||txtHour.getText().isEmpty()){
                 throw new Exception("Vui lòng nhập đầy đủ tên,code và giờ");
             }
-
+            for (MonHoc m : assignment_mon_hoc.listMonHoc.Controller.list) {
+                if (m.getCode().equals(txtCode.getText()))
+                    throw  new Exception(" mã code không được trùng. Vui lòng nhập dữ liệu");
+            }
+            assignment_mon_hoc.listMonHoc.Controller.list.add(new MonHoc(txtName.getText(),txtCode.getText(),txtHour.getText()));
+            onToList(null);
         }catch (Exception e){
             error.setText(e.getMessage());
             error.setVisible(true);

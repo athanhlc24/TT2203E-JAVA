@@ -37,4 +37,5 @@ public class MonHoc {
     public String toString(){
         return getName()+"---"+getCode()+"---"+getHour();
     }
+
 }
