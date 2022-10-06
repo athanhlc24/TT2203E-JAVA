@@ -20,6 +20,7 @@ public class Controller implements Initializable {
     public ListView<MonHoc> lvListMonHoc;
 
     public static ObservableList<MonHoc> list = FXCollections.observableArrayList();
+    public static MonHoc editItems;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -32,6 +33,18 @@ public class Controller implements Initializable {
 
 
         Main.rootStage.setTitle("Thêm môn học");
+        Main.rootStage.setScene(listScene);
+
+    }
+
+    public void edit(ActionEvent actionEvent) throws  Exception{
+        editItems = lvListMonHoc.getSelectionModel().getSelectedItem();
+        if (editItems == null) return;
+        Parent listPage = FXMLLoader.load(getClass().getResource("../edit/add_new_mon_hoc.fxml"));
+        Scene listScene = new Scene(listPage,800,600);
+
+
+        Main.rootStage.setTitle("Chỉnh sửa");
         Main.rootStage.setScene(listScene);
 
     }
