@@ -10,6 +10,6 @@ public class Main {
         b.setBalance(sc.nextDouble());
         System.out.println("Please enter the rate %: ");
         b.setRate(sc.nextDouble());
-        System.out.println( "interest rate USD: "+b.calculateInterest()+ "USD");
+        System.out.println( "interest rate USD: "+b.calculateInterest()+ " USD");
     }
 }
