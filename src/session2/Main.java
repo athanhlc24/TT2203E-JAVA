@@ -24,7 +24,9 @@ public class Main {
         mark[1] = 20;
         mark[2] = 30;
         mark[3] = 40;
-
+        for (int m:mark) {
+            System.out.println(m);
+        }
         Student[] students = new Student[10];
         students[0] = new Student("Nguyễn Văn An","293482394","8 tôn thất thuyết",29);
         for (int i = 0; i<students.length;i++){

@@ -10,5 +10,6 @@ public class Main {
         BullDogs bd = new BullDogs();
         bd.eat();
         bd.run();
+        bd.runFast();
     }
 }

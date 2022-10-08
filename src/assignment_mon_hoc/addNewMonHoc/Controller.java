@@ -1,16 +1,12 @@
 package assignment_mon_hoc.addNewMonHoc;
 
 import assignment_mon_hoc.Main;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-import student_assignment.Students;
 
 public class Controller {
     public TextField txtName;
