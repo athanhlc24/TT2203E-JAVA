@@ -1,4 +1,4 @@
-package baithi;
+package baithi.bank;
 
 public class Bank {
     double balance;
@@ -26,5 +26,10 @@ public class Bank {
 
     public void setRate(double rate) {
         this.rate = rate;
+    }
+    public double calculateInterest(){
+
+        return getBalance()*(getRate()/1200);
+
     }
 }
