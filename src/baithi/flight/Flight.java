@@ -5,8 +5,7 @@ public class Flight {
     String destination;
 
     public Flight() {
-        this.number = 0;
-        this.destination= "";
+
     }
 
     public Flight(int number, String destination) {
@@ -29,6 +28,10 @@ public class Flight {
     public void setDestination(String destination) {
         this.destination = destination;
     }
+
+
+
+
     public void disPlay(){
         System.out.println(getNumber()+","+getDestination());
     }
